@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Datasource {
     private Connection conn;
 
-    private static final String CONNECTION_STRING = String.format("localkhost", "5432", "postgres");
+    private static final String CONNECTION_STRING = String.format("localhost", "5432", "postgres");
     private static final String USER = "luca";
     private static final String PASS = "parola";
 
