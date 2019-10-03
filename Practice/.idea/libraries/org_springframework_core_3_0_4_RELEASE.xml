@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.springframework.core-3.0.4.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/org.springframework.core-3.0.4.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
