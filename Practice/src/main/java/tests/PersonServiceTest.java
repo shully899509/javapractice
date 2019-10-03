@@ -26,8 +26,8 @@ class PersonServiceTest {
             System.out.println("Error insert row test: " + e.getMessage());
         } catch (AssertionError e) {
             System.err.println(e);
-            System.err.println("Expected Person 1: " + expectedPerson.getId() + " " + expectedPerson.getName());
-            System.err.println("Actual Person 1: " + actualPerson.getId() + " " + actualPerson.getName());
+            System.err.println("Expected Person: " + expectedPerson.getId() + " " + expectedPerson.getName());
+            System.err.println("Actual Person: " + actualPerson.getId() + " " + actualPerson.getName());
         } finally {
             connection.rollback();
             personService.closeDatasource();
@@ -78,5 +78,61 @@ class PersonServiceTest {
             personService2.closeDatasource();
         }
 
+    }
+
+    @Test
+    public void testUpdatePerson() throws SQLException {
+        PersonService personService = new PersonService();
+        Connection connection = personService.getConnection();
+        connection.setAutoCommit(false);
+        Person expectedPerson = new Person("Luca");
+        Person actualPerson = new Person();
+        try{
+            Person insertPerson = personService.insertPerson(expectedPerson);
+            expectedPerson.setId(insertPerson.getId());
+            actualPerson = personService.queryPersonsById(expectedPerson.getId());
+            Assertions.assertEquals(expectedPerson, actualPerson);
+
+            actualPerson = personService.updatePerson(expectedPerson, "Alex");
+            expectedPerson.setName("Alex");
+            Assertions.assertEquals(expectedPerson, actualPerson);
+        } catch (SQLException e){
+            System.err.println("Error in Update Person test" + e);
+        } catch (AssertionError e) {
+            System.err.println(e);
+            System.err.println("Expected Person: " + expectedPerson.getId() + " " + expectedPerson.getName());
+            System.err.println("Actual Person: " + actualPerson.getId() + " " + actualPerson.getName());
+        } finally {
+            connection.rollback();
+            personService.closeDatasource();
+        }
+    }
+
+    @Test
+    public void testDeletePerson() throws SQLException {
+        PersonService personService = new PersonService();
+        Connection connection = personService.getConnection();
+        connection.setAutoCommit(false);
+        Person expectedPerson = new Person("Luca");
+        Person actualPerson = new Person();
+        try{
+            Person insertPerson = personService.insertPerson(expectedPerson);
+            expectedPerson.setId(insertPerson.getId());
+            actualPerson = personService.queryPersonsById(expectedPerson.getId());
+            Assertions.assertEquals(expectedPerson, actualPerson);
+
+            personService.deletePerson(expectedPerson);
+            actualPerson = personService.queryPersonsById(expectedPerson.getId());
+            Assertions.assertEquals(actualPerson, new Person());
+        } catch (SQLException e){
+            System.err.println("Error in test Delete Person: " + e.getMessage());
+        } catch (AssertionError e) {
+            System.err.println(e);
+            System.err.println("Expected Person: " + expectedPerson.getId() + " " + expectedPerson.getName());
+            System.err.println("Actual Person: " + actualPerson.getId() + " " + actualPerson.getName());
+        } finally {
+            connection.rollback();
+            personService.closeDatasource();
+        }
     }
 }
