@@ -51,17 +51,18 @@ class PersonServiceTest {
         Connection connection = personService.getConnection();
         connection.setAutoCommit(false);
         Person expectedPerson = new Person("Luca");
-        boolean excpetionThrown = false;
+
         try{
             Person insertPerson = personService.insertPerson(expectedPerson);
             expectedPerson.setId(insertPerson.getId());
             personService.deletePerson(expectedPerson);
             Person actualPerson = personService.getPersonById(expectedPerson.getId());
+            Assertions.fail("testDeletePerson failed. Person " + actualPerson.getId() + " " + actualPerson.getName() + " was found.");
         } catch (RuntimeException e) {
-            excpetionThrown = true;
+
         }
         finally {
-            Assertions.assertTrue(excpetionThrown);
+
             connection.rollback();
             personService.closeDatasource();
         }

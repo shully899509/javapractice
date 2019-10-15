@@ -1,25 +1,0 @@
-
-W
-squid:S106š"9Replace this use of System.out or System.err by a logger.(ÒÃ”Ã8ÒÕ„Ù-
-U
-squid:S106i"9Replace this use of System.out or System.err by a logger.(“†c8·£È½Ø-
-Jsquid:S1168‹"+Return an empty collection instead of null.(¥¹ï8ˆ”óƒÙ-
-Osquid:S1172x"1Remove this unused method parameter "directorId".(ªßÎ8®‹øƒÙ-
-\
-squid:S106©"9Replace this use of System.out or System.err by a logger.(¦â©ïøÿÿÿÿ8ÒÕ„Ù-
-\
-squid:S106¹"9Replace this use of System.out or System.err by a logger.(Â¬ÙÛûÿÿÿÿ8ÒÕ„Ù-
-Msquid:S1481"/Remove this unused "datasource" local variable.(³†õÜ8ªÏ¿„Ù-
-gsquid:HiddenFieldCheck">Rename "datasource" which hides the field declared at line 24.(³†õÜ8´‘Á„Ù-
-Isquid:S1168;"+Return an empty collection instead of null.(¥¹ï8·£È½Ø-
-V
-squid:S106:"9Replace this use of System.out or System.err by a logger.(ÂÖéº8·£È½Ø-
-[
-squid:S106J"9Replace this use of System.out or System.err by a logger.(»şç´øÿÿÿÿ8ï¸¿¼Ø-
-V
-squid:S106Y"9Replace this use of System.out or System.err by a logger.(âñ±8†åƒ„Ù-
-W
-squid:S106Š"9Replace this use of System.out or System.err by a logger.(ÂÖéº8ˆ”óƒÙ-
-fsquid:S1192$"HDefine a constant instead of duplicating this literal "SELECT " 4 times.(Ÿ¸”œ8Í°ßƒÙ-
-ksquid:S1192*"HDefine a constant instead of duplicating this literal " WHERE " 4 times.(ô¹±ııÿÿÿÿ8ØÉ„Ù-
-esquid:S1192$"GDefine a constant instead of duplicating this literal " FROM " 4 times.(Ÿ¸”œ8Í°ßƒÙ-
