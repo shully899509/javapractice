@@ -1,7 +1,7 @@
 package main.java.tests;
 
-import main.java.services.PersonService;
 import main.java.model.Person;
+import main.java.services.PersonService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +34,7 @@ class PersonServiceTest {
         connection.setAutoCommit(false);
         Person expectedPerson = new Person("Luca");
         String updatedName = "Alex";
-        try{
+        try {
             Person insertPerson = personService.insertPerson(expectedPerson);
             Person actualPerson = personService.updatePerson(insertPerson, updatedName);
             Assertions.assertEquals(updatedName, actualPerson.getName());
@@ -52,17 +52,33 @@ class PersonServiceTest {
         connection.setAutoCommit(false);
         Person expectedPerson = new Person("Luca");
 
-        try{
+        try {
             Person insertPerson = personService.insertPerson(expectedPerson);
             expectedPerson.setId(insertPerson.getId());
             personService.deletePerson(expectedPerson);
-            Person actualPerson = personService.getPersonById(expectedPerson.getId());
-            Assertions.fail("testDeletePerson failed. Person " + actualPerson.getId() + " " + actualPerson.getName() + " was found.");
-        } catch (RuntimeException e) {
-
+            Exception exception = Assertions.assertThrows(RuntimeException.class, () -> personService.deletePerson(expectedPerson));
+            Assertions.assertEquals("Person " + expectedPerson.getId() + " " + expectedPerson.getName() + " not found", exception.getMessage());
+        } finally {
+            connection.rollback();
+            personService.closeDatasource();
         }
-        finally {
+    }
 
+    @Test
+    public void findNoPerson() throws SQLException {
+        PersonService personService = new PersonService();
+        Connection connection = personService.getConnection();
+        connection.setAutoCommit(false);
+        Person expectedPerson = new Person("Luca");
+
+        try {
+            Person insertPerson = personService.insertPerson(expectedPerson);
+            expectedPerson.setId(insertPerson.getId());
+            personService.deletePerson(expectedPerson);
+
+            Exception exception = Assertions.assertThrows(RuntimeException.class, () -> personService.getPersonById(expectedPerson.getId()));
+            Assertions.assertEquals("No Person with ID " + expectedPerson.getId() + " found.", exception.getMessage());
+        } finally {
             connection.rollback();
             personService.closeDatasource();
         }

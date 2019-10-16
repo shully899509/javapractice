@@ -97,7 +97,9 @@ public class PersonService {
     public void deletePerson(Person person) {
         try (PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM " + PERSONS_TABLE + " WHERE " + ID + " = ?")) {
             preparedStatement.setInt(1, person.getId());
-            preparedStatement.executeUpdate();
+            if (preparedStatement.executeUpdate() == 0){
+                throw new RuntimeException("Person " + person.getId() + " " + person.getName() + " not found");
+            }
         } catch (SQLException e) {
             System.err.println("Error deleting row from Persons table: " + e.getMessage());
         }
