@@ -1,0 +1,13 @@
+
+Msquid:S1172"1Remove this unused method parameter "directorId".(şªè§8‰Î×á-
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅşÿÿÿÿ8‰Î×á-
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Î‡å²ÿÿÿÿÿ8‰Î×á-
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(–Ì·8‰Î×á-
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(œÚÎ8‰Î×á-
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8‰Î×á-
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅşÿÿÿÿ8‰Î×á-
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(äš‰¥ÿÿÿÿÿ8‰Î×á-
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(€â’âùÿÿÿÿ8‰Î×á-
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(•½àê8‰Î×á-

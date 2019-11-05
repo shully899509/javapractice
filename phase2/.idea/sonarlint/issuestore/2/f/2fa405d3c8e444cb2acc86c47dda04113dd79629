@@ -1,0 +1,20 @@
+
+bsquid:S1192"HDefine a constant instead of duplicating this literal " WHERE " 3 times.(‡‰±ùøÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(äš‰¥ÿÿÿÿÿ
+isquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡‰±ùøÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¹‰ëŒúÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Î‡å²ÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚Ù”í
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¸ŸÞ
+asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅþÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Î‡å²ÿÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(­³ÁÉ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¬š¨‚úÿÿÿÿ
+asquid:S1192"GDefine a constant instead of duplicating this literal " FROM " 3 times.(Š³¡âüÿÿÿÿ
+\squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ÂÜ™ç
+bsquid:S1192"HDefine a constant instead of duplicating this literal "SELECT " 3 times.(Š³¡âüÿÿÿÿ
+asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅþÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(É¸’é
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
