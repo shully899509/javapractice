@@ -1,0 +1,20 @@
+
+csquid:S1192$"GDefine a constant instead of duplicating this literal " FROM " 3 times.(Š³¡âüÿÿÿÿ
+dsquid:S1192)"HDefine a constant instead of duplicating this literal " WHERE " 3 times.(‡‰±ùøÿÿÿÿ
+dsquid:S1192$"HDefine a constant instead of duplicating this literal "SELECT " 3 times.(Š³¡âüÿÿÿÿ
+csquid:S2095q"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅþÿÿÿÿ
+ksquid:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡‰±ùøÿÿÿÿ
+^squid:S20951"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ÂÜ™ç
+csquid:S2095V"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(³ÇŒÅþÿÿÿÿ
+^squid:S001125"FDefine and throw a dedicated exception instead of using a generic one.(É¸’é
+csquid:S001128"FDefine and throw a dedicated exception instead of using a generic one.(Î‡å²ÿÿÿÿÿ
+csquid:S00112Z"FDefine and throw a dedicated exception instead of using a generic one.(¹‰ëŒúÿÿÿÿ
+csquid:S00112]"FDefine and throw a dedicated exception instead of using a generic one.(Î‡å²ÿÿÿÿÿ
+^squid:S00112e"FDefine and throw a dedicated exception instead of using a generic one.(­³ÁÉ
+csquid:S00112u"FDefine and throw a dedicated exception instead of using a generic one.(¬š¨‚úÿÿÿÿ
+csquid:S00112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+isquid:S00117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¸ŸÞ
+T
+squid:S106H"9Replace this use of System.out or System.err by a logger.(äš‰¥ÿÿÿÿÿ
+O
+squid:S106h"9Replace this use of System.out or System.err by a logger.(‚Ù”í

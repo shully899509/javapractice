@@ -1,16 +1,16 @@
-package com.javapractice.practice2.model;
+package com.persons;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
-@Table(name = "persons")
-@Inheritance(
-        strategy = InheritanceType.TABLE_PER_CLASS
-)
+//@Entity
+//@Table(name = "persons")
+//@Inheritance(
+   //     strategy = InheritanceType.TABLE_PER_CLASS
+//)
 public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
     private String name;
 

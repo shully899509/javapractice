@@ -1,7 +1,5 @@
-package main.java;
-
-import main.java.services.PersonService;
-import main.java.model.Person;
+import model.Person;
+import services.PersonService;
 
 import java.sql.SQLException;
 import java.util.List;

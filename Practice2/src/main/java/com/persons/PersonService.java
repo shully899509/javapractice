@@ -1,20 +1,18 @@
-package com.javapractice.practice2.service;
+package com.persons;
 
 import com.javapractice.practice2.model.EntityNotFoundException;
-import com.javapractice.practice2.model.Person;
-import com.javapractice.practice2.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service
 public class PersonService {
 
     private final PersonRepository personRepository;
 
-    @Autowired
+//    @Autowired
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }

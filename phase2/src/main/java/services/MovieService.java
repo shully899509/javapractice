@@ -1,7 +1,7 @@
-package main.java.services;
+package services;
 
-import main.java.datarepository.Datasource;
-import main.java.model.Movie;
+import datarepository.Datasource;
+import model.Movie;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

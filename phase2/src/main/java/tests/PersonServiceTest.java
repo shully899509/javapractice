@@ -1,7 +1,7 @@
-package main.java.tests;
+package tests;
 
-import main.java.model.Person;
-import main.java.services.PersonService;
+import model.Person;
+import services.PersonService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

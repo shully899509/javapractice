@@ -1,38 +1,11 @@
 package com.javapractice.practice2.model;
 
-public class Person {
+public interface Person {
+    int getId();
 
-    private int id;
-    private String name;
+    void setId(int id);
 
-    public Person() {
-    }
+    String getName();
 
-    public Person(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    void setName(String name);
 }

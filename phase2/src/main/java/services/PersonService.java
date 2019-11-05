@@ -1,7 +1,7 @@
-package main.java.services;
+package services;
 
-import main.java.datarepository.Datasource;
-import main.java.model.Person;
+import datarepository.Datasource;
+import model.Person;
 
 import java.sql.*;
 import java.util.ArrayList;

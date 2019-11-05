@@ -1,4 +1,0 @@
-rootProject.name = 'practice2'
-include 'core'
-include 'web'
-
